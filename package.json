@@ -1,0 +1,22 @@
+{
+  "name": "npm-yarn-installer",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "repository": "https://github.com/Shinyaigeek/npm-yarn-installer.git",
+  "author": "<PhilisPaxil@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@types/node": "^14.6.0",
+    "child_process": "^1.0.2"
+  },
+  "devDependencies": {
+    "typescript": "^4.0.2"
+  },
+  "scripts": {
+    "build": "tsc index.ts --outDir ./dist",
+    "prebulishOnly": "yarn run build"
+  },
+  "files": [
+    "dist"
+  ]
+}
