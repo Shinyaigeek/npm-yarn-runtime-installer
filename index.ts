@@ -26,10 +26,9 @@ const install: (
 
 const uninstall: (
   modules: string[],
-  saveDevs: boolean,
   manager?: "npm" | "yarn",
   errHandle?: (err: string) => void
-) => void = (modules, saveDevs, manager, errHandle) => {
+) => void = (modules, manager, errHandle) => {
   const isYarn = manager === "yarn";
   const cmd = isYarn ? "yarn remove" : "npm uninstall";
   const exe = `${cmd} ${modules.map((md) => md + " ")}`;
